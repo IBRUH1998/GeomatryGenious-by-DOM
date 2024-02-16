@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geomatry Genious</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="m-8">
+    <header></header>
+
+    <main>
+      <!--main content container-->
+      <div class="flex gap-8 flex-col md:flex-row">
+        <!--shape card container-->
+        <div class="flex-1 gap-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!--triangle-->
+          <div class="card w-full bg-gray-300 shadow-xl">
+            <figure><img src="images/triangle.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="font-semibold text-3xl text-center">Triangle</h2>
+
+              <p class="text-center">Area (A) = 0.5 * b * h</p>
+              <div class="flex">
+                <input id="triangle-base" type="text" class="w-20 text-2xl p-2  rounded-sm" placeholder="b" />
+                <span class="px-2">cm</span>
+                <input id="triangle-height" type="text" class="w-20 text-2xl p-2 rounded-sm" placeholder="h" />
+                <span class="px-1">cm</span>
+              </div>
+              <div>
+                <p class="text-2xl">Area:<span id="triangle-area"></span> <span>cm <sup>2</sup></span></p>
+              </div>
+
+              <div class="card-actions">
+                <button onclick="calculateTriangle()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+
+          <!--rectangle-->
+          <div class="card w-ful bg-orange-100 shadow-xl">
+            <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="font-semibold text-3xl text-center">Rectangle</h2>
+
+              <p class="text-center">Area (A) = W * L </p>
+              <div class="flex">
+                <input id="rectangle-width" type="text" class="w-20 text-2xl p-2  rounded-sm" placeholder="b" />
+                <span class="px-2">cm</span>
+                <input id="rectangle-length" type="text" class="w-20 text-2xl p-2 rounded-sm" placeholder="h" />
+                <span class="px-1">cm</span>
+              </div>
+              <div>
+                <p class="text-2xl">Area:<span id="rectangle-area"></span> <span>cm <sup>2</sup></span></p>
+              </div>
+
+              <div class="card-actions">
+                <button onclick="calculateRectangle()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+
+          <!--triangle-->
+          <div class="card w-full bg-base-100 shadow-xl">
+            <figure><img src="images/rhombus.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!--triangle-->
+          <div class="card w-full bg-base-100 shadow-xl">
+            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--area Calculation-->
+        <div class="w-96 border border-gray-700 rounded-md shadow-2xl">
+          <h3 class="text-4xl text-center p-4">Area Calculation--</h3>
+        </div>
+      </div>
+    </main>
+    <script src="js/triangleCalculate.js"></script>
+    <script src="js/rectangleCalculate.js"></script>
+  </body>
+</html>
